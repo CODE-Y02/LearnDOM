@@ -26,4 +26,8 @@ console.log(headerTitle);
 
 // NOTE :---- Inner text pays attention to style
 
-headerTitle.innerHTML = "<h5>Hello</h5>";
+// headerTitle.innerHTML = "<h5>Hello</h5>";
+
+headerTitle.style.color = "black";
+headerTitle.innerText = "HELLO DOM";
+document.title = "DOM 1";
