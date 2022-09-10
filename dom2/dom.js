@@ -1,3 +1,6 @@
+
+// task 5
+/*
 // Add a new li element without the same class Name --> done in html
 
 //And try editing it with getelementsbyclassname and then by getelementbytagname
@@ -19,3 +22,7 @@ console.log(li[4]);
 li[4].innerText = "list ending";
 
 li[4].style.textAlign = "center";
+*/
+
+
+// task 6
