@@ -1,0 +1,10 @@
+Difference between innertext and textcontent.
+
+innertext listen to css and modifies in dom 
+
+textcontent doesnot listen to css;
+
+if we do display none in css 
+and console log element 
+innertext will apply display none and hide content
+but textcontent will console log content as it is without hiding anything
