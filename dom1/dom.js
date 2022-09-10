@@ -19,8 +19,8 @@
 
 // get ele by ID
 // console.log(document.getElementById("header-title"));
-let headerTitle = document.getElementById("header-title");
-let header = document.getElementById("main-header");
+// let headerTitle = document.getElementById("header-title");
+// let header = document.getElementById("main-header");
 // console.log(headerTitle);
 // headerTitle.textContent = "hello";
 // headerTitle.innerText = "BYE BYE";
@@ -33,8 +33,8 @@ let header = document.getElementById("main-header");
 // headerTitle.innerText = "HELLO DOM";
 // document.title = "DOM 1";
 
-header.style.borderBottom = "solid 3px black";
-
+// header.style.borderBottom = "solid 3px black";
+/*
 // Get ele by class name
 // let items = document.getElementsByClassName("list-group-item");
 // console.log(items);
@@ -49,3 +49,13 @@ let addItem = titles[0];
 // console.log(addItem);
 addItem.style.fontWeight = "bold";
 addItem.style.color ="green";
+*/
+
+//Make the 3 rd element in the list have green background color
+
+let listItems = document.getElementsByClassName("list-group");
+console.log(listItems);
+listItems[0].children[2].style.background = "lightgreen";
+
+
+// Make all the elements in the list have bold color font
