@@ -28,6 +28,6 @@ console.log(headerTitle);
 
 // headerTitle.innerHTML = "<h5>Hello</h5>";
 
-headerTitle.style.color = "black";
-headerTitle.innerText = "HELLO DOM";
-document.title = "DOM 1";
+// headerTitle.style.color = "black";
+// headerTitle.innerText = "HELLO DOM";
+// document.title = "DOM 1";
