@@ -20,7 +20,8 @@
 // get ele by ID
 // console.log(document.getElementById("header-title"));
 let headerTitle = document.getElementById("header-title");
-console.log(headerTitle);
+let header = document.getElementById("main-header");
+// console.log(headerTitle);
 // headerTitle.textContent = "hello";
 // headerTitle.innerText = "BYE BYE";
 
@@ -31,3 +32,5 @@ console.log(headerTitle);
 // headerTitle.style.color = "black";
 // headerTitle.innerText = "HELLO DOM";
 // document.title = "DOM 1";
+
+header.style.borderBottom = "solid 3px black";
