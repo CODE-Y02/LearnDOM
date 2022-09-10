@@ -1,0 +1,31 @@
+tree structure:-
+
+root node :- html
+
+<html> 
+
+ child <h1> 
+
+	with textNode "Title"
+
+
+
+<body>
+
+ 1st child <input> 
+
+	attribute:-
+
+		type , with value => "text"
+
+		name , with value => "Name"
+
+
+
+ 2nd child <input> 
+
+	attribute:-
+
+		type , with value => "button"
+
+		value , with value => "Submit"
