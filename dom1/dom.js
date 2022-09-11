@@ -65,7 +65,5 @@ let items = document.getElementsByClassName("list-group-item");
 // }
 
 Array.from(listItems[0].children).forEach((element) => {
-  element.style.background = "black";
+  element.style.fontWeight = "bold";
 });
-
-
