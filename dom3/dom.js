@@ -35,5 +35,14 @@ console.log(itemList.firstChild)
 */
 
 // First ele child
+/*
 console.log(itemList.firstElementChild)
-itemList.firstElementChild.textContent ="Hello DOM"
+itemList.firstElementChild.textContent ="Hello DOM";
+*/
+
+// Lastchild --> works similar to firstChild
+console.log(itemList.lastChild);
+
+//lastelementchild
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent = "Hello last";
