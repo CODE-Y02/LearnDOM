@@ -26,6 +26,7 @@ li[4].style.textAlign = "center";
 // task 6
 
 // Query selector
+/*
 let header = document.querySelector("#main-header");
 // console.log(header);
 header.style.borderBottom = "solid 4px #ccc";
@@ -50,4 +51,27 @@ lastItem.style.background = "lightgreen";
 let secondItem = document.querySelector(".list-group-item:nth-child(2)");
 // console.log(secondItem);
 secondItem.style.background = "pink";
+*/
+
+// query selector all
+
+const titles = document.querySelectorAll(".title");
+console.log(titles);
+// titles.map((item) => (item.textContent = "hello"));
+
+// titles.forEach((item) => {
+//   console.log(item);
+// //   item.innerText = "hello";
+// // item.style.color ="blue"
+// });
+
+titles[0].textContent = "Hello";
+
+let odd = document.querySelectorAll("li:nth-child(odd)");
+console.log(odd);
+odd.forEach((item) => (item.style.backgroundColor = "#f4f4f4"));
+
+let even = document.querySelectorAll("li:nth-child(even)");
+even.forEach((item) => (item.style.backgroundColor = "#ccc"));
+
 
