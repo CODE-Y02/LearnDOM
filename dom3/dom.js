@@ -21,6 +21,19 @@ console.log(itemList.parentElement.parentElement);
 // console.log(itemList.childNodes)
 
 // Children
+/*
 console.log(itemList.children);
 console.log(itemList.children[1]);
 itemList.children[1].style.backgroundColor = "yellow";
+*/
+
+// FirstChild
+/*
+console.log(itemList.firstChild)
+
+// first child and child nodes workds similar , they also counts whitespace 
+*/
+
+// First ele child
+console.log(itemList.firstElementChild)
+itemList.firstElementChild.textContent ="Hello DOM"
