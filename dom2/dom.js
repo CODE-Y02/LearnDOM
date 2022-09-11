@@ -97,6 +97,11 @@ items[1].style.color = "green";
 // items[1].style.background = "black";
 // items[1].style.fontWeight = "bold";
 
-//Choose all the odd elements and make their background green using QuerySelectorALL﻿
+//Choose all the odd elements and make their background green using QuerySelectorALL
 
-// let oddItem = document.querySelectorAll('.list-group-item')
+let oddItems = document.querySelectorAll(".list-group-item:nth-child(odd)");
+
+oddItems.forEach((item) => {
+  // console.log(item)
+  item.style.backgroundColor = "green";
+});
