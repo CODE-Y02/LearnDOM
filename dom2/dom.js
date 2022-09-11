@@ -77,6 +77,11 @@ even.forEach((item) => (item.style.backgroundColor = "#ccc"));
 */
 // started task 6
 //Make the 2nd item have green background color
-let item = document.querySelector(".list-group-item:nth-child(2)");
+let item2 = document.querySelector(".list-group-item:nth-child(2)");
 // console.log(item);
-item.style.backgroundColor = "lightgreen";
+item2.style.backgroundColor = "lightgreen";
+
+//Make the 3rd item invisible
+let item3 = document.querySelector(".list-group-item:nth-child(3)");
+// console.log(item);
+item3.style.display = "none";
