@@ -74,8 +74,10 @@ odd.forEach((item) => (item.style.backgroundColor = "#f4f4f4"));
 let even = document.querySelectorAll("li:nth-child(even)");
 even.forEach((item) => (item.style.backgroundColor = "#ccc"));
 
-*/
+
 // started task 6
+*/
+/*
 //Make the 2nd item have green background color
 let item2 = document.querySelector(".list-group-item:nth-child(2)");
 // console.log(item);
@@ -85,3 +87,16 @@ item2.style.backgroundColor = "lightgreen";
 let item3 = document.querySelector(".list-group-item:nth-child(3)");
 // console.log(item);
 item3.style.display = "none";
+*/
+
+//Using QuerySelectorALL change the font color to green for 2nd item in the item list
+let items = document.querySelectorAll(".list-group-item");
+// console.log(items)
+
+items[1].style.color = "green";
+// items[1].style.background = "black";
+// items[1].style.fontWeight = "bold";
+
+//Choose all the odd elements and make their background green using QuerySelectorALL﻿
+
+// let oddItem = document.querySelectorAll('.list-group-item')
