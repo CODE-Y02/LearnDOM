@@ -105,3 +105,9 @@ oddItems.forEach((item) => {
   // console.log(item)
   item.style.backgroundColor = "green";
 });
+
+// difference between quaryselector and quearyselectorall
+/*
+queryselector selects first matching element
+queryselectorAll gives array of all matching elements
+*/
