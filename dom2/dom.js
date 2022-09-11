@@ -1,4 +1,3 @@
-
 // task 5
 /*
 // Add a new li element without the same class Name --> done in html
@@ -24,5 +23,31 @@ li[4].innerText = "list ending";
 li[4].style.textAlign = "center";
 */
 
-
 // task 6
+
+// Query selector
+let header = document.querySelector("#main-header");
+// console.log(header);
+header.style.borderBottom = "solid 4px #ccc";
+
+let input = document.querySelector("input");
+input.value = "hello gitHub";
+
+let submit = document.querySelector('input[type="submit"]');
+submit.style.background = "red";
+submit.value = "SEND";
+
+let item = document.querySelector(".list-group-item");
+item.style.background = "lightgray";
+
+// quary selector only changes first match element
+
+let lastItem = document.querySelector(".list-group-item:last-child");
+// console.log(lastItem);
+lastItem.style.background = "lightgreen";
+
+//selecting nth
+let secondItem = document.querySelector(".list-group-item:nth-child(2)");
+// console.log(secondItem);
+secondItem.style.background = "pink";
+
