@@ -87,7 +87,6 @@ item2.style.backgroundColor = "lightgreen";
 let item3 = document.querySelector(".list-group-item:nth-child(3)");
 // console.log(item);
 item3.style.display = "none";
-*/
 
 //Using QuerySelectorALL change the font color to green for 2nd item in the item list
 let items = document.querySelectorAll(".list-group-item");
@@ -96,15 +95,17 @@ let items = document.querySelectorAll(".list-group-item");
 items[1].style.color = "green";
 // items[1].style.background = "black";
 // items[1].style.fontWeight = "bold";
-
+*/
 //Choose all the odd elements and make their background green using QuerySelectorALL
 
 let oddItems = document.querySelectorAll(".list-group-item:nth-child(odd)");
 
-oddItems.forEach((item) => {
-  // console.log(item)
-  item.style.backgroundColor = "green";
-});
+// oddItems.forEach((item) => {
+//   // console.log(item)
+//   item.style.backgroundColor = "green";
+// });
+console.log(oddItems);
+Array.from(oddItems).map((item) => (item.style.backgroundColor = "green"));
 
 // difference between quaryselector and quearyselectorall
 /*
