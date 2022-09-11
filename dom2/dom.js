@@ -54,7 +54,7 @@ secondItem.style.background = "pink";
 */
 
 // query selector all
-
+/*
 const titles = document.querySelectorAll(".title");
 console.log(titles);
 // titles.map((item) => (item.textContent = "hello"));
@@ -74,4 +74,9 @@ odd.forEach((item) => (item.style.backgroundColor = "#f4f4f4"));
 let even = document.querySelectorAll("li:nth-child(even)");
 even.forEach((item) => (item.style.backgroundColor = "#ccc"));
 
-
+*/
+// started task 6
+//Make the 2nd item have green background color
+let item = document.querySelector(".list-group-item:nth-child(2)");
+// console.log(item);
+item.style.backgroundColor = "lightgreen";
