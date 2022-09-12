@@ -96,7 +96,7 @@ container.insertBefore(newDiv, h1);
 // Tasks
 // Now go head and add HEllo word before Item Lister
 let newEle = document.createElement("h1");
-let eleText = document.createTextNode("HEllo word");
+let eleText = document.createTextNode("Hello World");
 newEle.appendChild(eleText);
 // console.log(newEle)
 let container = document.querySelector("header .container");
@@ -109,13 +109,10 @@ container.insertBefore(newEle, itemLister);
 let ul = document.getElementById("items");
 console.log(ul);
 
-let li = document.querySelector(".list-group-item");
+// let li = document.querySelector(".list-group-item");
 
 // ul.firstElementChild(newEle);
 
-ul.insertBefore(newEle, li[0]);
+// ul.insertBefore(newEle, li[0]);
 
-let newli = document.createElement("li");
-newli.innerText = "hello world";
-ul.firstElementChild(newli)
-
+ul.innerHTML = '<li class="list-group-item" >Hello world </li>' + ul.innerHTML;
