@@ -50,7 +50,7 @@ itemList.lastElementChild.textContent = "Hello last";
 */
 
 let itemList = document.querySelector("#items");
-
+/*
 // nextsibling
 console.log(itemList.nextSibling);
 // next ele sibling
@@ -62,3 +62,24 @@ console.log(itemList.previousSibling);
 //previous element sibling
 console.log(itemList.previousElementSibling);
 itemList.previousElementSibling.style.color = "green";
+*/
+
+// Create element
+
+//create div
+var newDiv = document.createElement("div");
+// add class
+newDiv.className = "hello";
+//add id
+newDiv.id = "hello1";
+
+//add attr
+newDiv.setAttribute("title", "hello div");
+
+// create text node
+let newDivText = document.createTextNode("Hello DOM");
+// add text to div
+newDiv.appendChild(newDivText);
+
+
+console.log(newDiv);
