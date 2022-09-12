@@ -81,5 +81,11 @@ let newDivText = document.createTextNode("Hello DOM");
 // add text to div
 newDiv.appendChild(newDivText);
 
+let container = document.querySelector("header .container");
+let h1 = document.querySelector("header h1");
+
+// insertbefore
 
 console.log(newDiv);
+
+container.insertBefore(newDiv, h1);
