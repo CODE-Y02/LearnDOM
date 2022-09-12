@@ -1,5 +1,5 @@
 // Traversing Dom
-let itemList = document.querySelector("#items");
+// let itemList = document.querySelector("#items");
 
 // parentNode
 /*
@@ -41,8 +41,24 @@ itemList.firstElementChild.textContent ="Hello DOM";
 */
 
 // Lastchild --> works similar to firstChild
+/*
 console.log(itemList.lastChild);
 
 //lastelementchild
 console.log(itemList.lastElementChild);
 itemList.lastElementChild.textContent = "Hello last";
+*/
+
+let itemList = document.querySelector("#items");
+
+// nextsibling
+console.log(itemList.nextSibling);
+// next ele sibling
+console.log(itemList.nextElementSibling);
+
+//previous sibling
+console.log(itemList.previousSibling);
+
+//previous element sibling
+console.log(itemList.previousElementSibling);
+itemList.previousElementSibling.style.color = "green";
