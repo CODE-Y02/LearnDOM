@@ -65,7 +65,7 @@ itemList.previousElementSibling.style.color = "green";
 */
 
 // Create element
-
+/*
 //create div
 var newDiv = document.createElement("div");
 // add class
@@ -89,3 +89,33 @@ let h1 = document.querySelector("header h1");
 console.log(newDiv);
 
 container.insertBefore(newDiv, h1);
+
+
+*/
+
+// Tasks
+// Now go head and add HEllo word before Item Lister
+let newEle = document.createElement("h1");
+let eleText = document.createTextNode("HEllo word");
+newEle.appendChild(eleText);
+// console.log(newEle)
+let container = document.querySelector("header .container");
+let itemLister = document.getElementById("header-title");
+
+container.insertBefore(newEle, itemLister);
+
+// Now go head and add HEllo word before Item 1
+
+let ul = document.getElementById("items");
+console.log(ul);
+
+let li = document.querySelector(".list-group-item");
+
+// ul.firstElementChild(newEle);
+
+ul.insertBefore(newEle, li[0]);
+
+let newli = document.createElement("li");
+newli.innerText = "hello world";
+ul.firstElementChild(newli)
+
