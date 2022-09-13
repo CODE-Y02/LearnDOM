@@ -88,12 +88,13 @@ function filterItems(e) {
   // console.log(items);
   //convert to arrays
   Array.from(items).forEach((item) => {
-    // console.log(item.childNodes[0]);
-    let itemName = item.firstChild.textContent;
+    // console.log(item);
+    let itemName = item.childNodes[0].nodeValue;
     let itemDesc = item.childNodes[2].data;
-    itemName = itemDesc.toLocaleLowerCase();
-    itemDesc = itemDesc.toLocaleLowerCase();
-    if (itemName.indexOf(text) !== -1 || itemDesc.indexOf(text) !== -1) {
+    itemName = itemName.toLowerCase();
+
+    itemDesc = itemDesc.toLowerCase();
+    if (itemName.includes(text) || itemDesc.includes(text)) {
       item.style.display = "block";
     } else {
       item.style.display = "none";
