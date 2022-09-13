@@ -60,7 +60,8 @@ function addItem(e) {
   li.appendChild(editBtn);
 
   itemList.appendChild(li);
-
+  // store in local storage
+  localStorage.setItem(newItem.value,desc.value)
   // clear
   document.getElementById("item").value = "";
   desc.value = "";
