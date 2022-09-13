@@ -34,8 +34,17 @@ function addItem(e) {
   // appednd text node
   deleteBtn.appendChild(document.createTextNode("X"));
 
+  //create edit btn
+  let editBtn = document.createElement("button");
+  // add class to edit btn
+  editBtn.className = "btn btn-sm float-right edit";
+
+  // create text node
+  editBtn.innerText = "Edit";
+
   // apppednd btn to li
   li.appendChild(deleteBtn);
+  li.appendChild(editBtn);
 
   itemList.appendChild(li);
 
@@ -50,7 +59,7 @@ function removeItem(e) {
 
     if (confirm("Are yoy sure ?")) {
       let li = e.target.parentElement;
-      li.remove()
+      li.remove();
     }
   }
 }
