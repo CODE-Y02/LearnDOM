@@ -61,7 +61,7 @@ function addItem(e) {
 
   itemList.appendChild(li);
   // store in local storage
-  localStorage.setItem(newItem.value,desc.value)
+  localStorage.setItem(newItem.value, desc.value);
   // clear
   document.getElementById("item").value = "";
   desc.value = "";
@@ -74,6 +74,8 @@ function removeItem(e) {
 
     if (confirm("Are yoy sure ?")) {
       let li = e.target.parentElement;
+      // console.log(li.childNodes[0].nodeValue);
+      localStorage.removeItem(li.childNodes[0].nodeValue)
       li.remove();
     }
   }
