@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-color: rgb(33, 33, 33);
+  border-bottom: 1px solid rgb(238, 236, 236);
+  color: aqua;
+}
+
+.main-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.wrapper {
+  /* background: rgb(175, 175, 175); */
+  width: 80vw;
+  min-width: 150px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+.title {
+  color: #0d0221;
+  margin-bottom: 5px;
+  font-weight: 200;
+}
+#newitem,
+#newitem :active {
+  width: 60%;
+  min-width: 150px;
+  font-size: 18px;
+  border: 1px solid gray;
+  padding: 6px;
+}
+form {
+  margin-bottom: 20px;
+}
+.btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.addBtn {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid whitesmoke;
+}
+ul {
+  border: 1px solid black;
+  list-style: none;
+  width: 100%;
+}
+li {
+  /* background-color: blue; */
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+}
+#deleteBtn,
+#editBtn {
+  float: right;
+  color: white;
+  padding: 2.5px;
+  border: none;
+  border-radius: 2px;
+  font-size: 18px;
+}
+#deleteBtn {
+  background-color: red;
+}
+#editBtn {
+  background-color: green;
+  font-size: 18px;
+}
