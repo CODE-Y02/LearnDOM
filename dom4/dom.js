@@ -18,7 +18,7 @@ function addItem(e) {
   // get input value
   let newItem = document.getElementById("item");
   if (newItem.value == "") {
-    prompt("Enter Valid Item");
+    alert("Enter Valid Item");
     return;
   }
   // get item desc
@@ -32,7 +32,11 @@ function addItem(e) {
   // console.log(li);
 
   // add text node with input value
-  li.innerText = `${newItem.value}  ${desc.value}`;
+  // li.innerText = `${newItem.value}  ${desc.value}`;
+  li.appendChild(document.createTextNode(newItem.value));
+  li.appendChild(document.createTextNode(" "));
+
+  li.appendChild(document.createTextNode(desc.value));
 
   //create dl button ele
   let deleteBtn = document.createElement("button");
@@ -84,10 +88,12 @@ function filterItems(e) {
   // console.log(items);
   //convert to arrays
   Array.from(items).forEach((item) => {
-    // console.log(item.firstChild.textContent);
+    // console.log(item.childNodes[0]);
     let itemName = item.firstChild.textContent;
-
-    if (itemName.toLocaleLowerCase().indexOf(text) !== -1) {
+    let itemDesc = item.childNodes[2].data;
+    itemName = itemDesc.toLocaleLowerCase();
+    itemDesc = itemDesc.toLocaleLowerCase();
+    if (itemName.indexOf(text) !== -1 || itemDesc.indexOf(text) !== -1) {
       item.style.display = "block";
     } else {
       item.style.display = "none";
