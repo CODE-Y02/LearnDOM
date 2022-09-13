@@ -16,7 +16,13 @@ function addItem(e) {
   e.preventDefault();
 
   // get input value
-  let newItem = document.getElementById("item").value;
+  let newItem = document.getElementById("item");
+  if (newItem.value == "") {
+    prompt("Enter Valid Item");
+    return;
+  }
+  // get item desc
+  let desc = document.getElementById("desc");
 
   // create new li element
   let li = document.createElement("li");
@@ -26,7 +32,7 @@ function addItem(e) {
   // console.log(li);
 
   // add text node with input value
-  li.appendChild(document.createTextNode(newItem));
+  li.innerText = `${newItem.value}  ${desc.value}`;
 
   //create dl button ele
   let deleteBtn = document.createElement("button");
@@ -53,6 +59,7 @@ function addItem(e) {
 
   // clear
   document.getElementById("item").value = "";
+  desc.value = "";
 }
 
 // remove Item
