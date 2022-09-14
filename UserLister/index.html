@@ -13,7 +13,8 @@
         align-items: center;
         font-family: serif;
       }
-      .userForm {
+      .userForm,
+      ul {
         margin-top: 10px;
         padding: 15px;
         width: 60vw;
@@ -38,12 +39,16 @@
         background-color: black;
         color: white;
       }
-      /* li {
+      li {
         display: flex;
         justify-content: space-between;
         list-style: none;
         margin: 10px;
-      } */
+      }
+      .del {
+        background-color: red;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -57,12 +62,12 @@
       </label>
       <input type="submit" id="submit" value="Submit" />
     </form>
-    <!-- <ul>
-      <li class="userInfo">
+    <ul id="userList">
+      <!-- <li class="userInfo">
         Info
         <button class="del btn">Delete</button>
-      </li>
-    </ul> -->
+      </li> -->
+    </ul>
 
     <script src="./index.js"></script>
   </body>
