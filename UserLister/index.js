@@ -10,12 +10,16 @@ form.addEventListener("submit", (e) => {
     name: name.value,
     email: email.value,
   };
+
   if (localStorage.getItem(user.email)) {
     // if email alreay exist
-    alert("Email Already exist");
-    return -1;
+    if (confirm("Email already exist !! Overwrite it ? ")) {
+      removeUser(user.email);
+    } else {
+      return;
+    }
   }
-  localStorage.setItem(user.email, JSON.stringify(user));
+
   showUserOnScreen(user);
 
   name.value = "";
@@ -23,24 +27,41 @@ form.addEventListener("submit", (e) => {
 });
 
 function showUserOnScreen(user) {
+  localStorage.setItem(user.email, JSON.stringify(user));
   const parentNode = document.getElementById("userList");
-  const childHtml = `<li class="userInfo"> ${user.name} <span>${user.email}  </span><button class="del btn">Delete</button></li>`;
+  const childHtml = `<li class="userInfo" id='${user.email}' > ${user.name} ${user.email}  <button class="btn edit" >Edit</button><button class="btn del" >Delete</button></li>`;
 
   parentNode.innerHTML = parentNode.innerHTML + childHtml;
 }
 
-// delete funcion
+//delete and edit
 let ul = document.getElementById("userList");
 ul.addEventListener("click", (e) => {
   e.preventDefault();
-  // console.log(e.target.classList.contains("del"));
+  console.log(e.target.classList.contains("del"));
   if (e.target.classList.contains("del")) {
-    //perform delete
     let li = e.target.parentElement;
-    // console.log(li.children[0].innerText);
-    let userEmail = li.children[0].innerText;
-    localStorage.removeItem(userEmail);
+    // console.log(li.id) --> email
+    removeUser(li.id);
+  }
+  if (e.target.classList.contains("edit")) {
+    let li = e.target.parentElement;
+    // console.log(li.id) --> email
 
-    li.remove();
+    let user = JSON.parse(localStorage.getItem(li.id));
+    document.getElementById("name").value = user.name;
+    document.getElementById("email").value = user.email;
+    removeUser(li.id);
   }
 });
+
+//remove user
+function removeUser(email) {
+  // new li has id of user's email
+  const li = document.getElementById(email);
+
+  if (li) {
+    localStorage.removeItem(email);
+    li.remove();
+  }
+}
